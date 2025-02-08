@@ -18,7 +18,7 @@ struct Method {
     actions_left: i32,
     actions_done: i32,
     total_actions: i32,
-    method: ActionType,   
+    method: ActionType,
 }
 
 const SKILLS: [&str; 23] = [
@@ -70,10 +70,10 @@ fn main() {
 
     // correct because we handle the Result with expect
     io::stdin().read_line(&mut skill_choice).expect("Failed");
-    let skill_choice = skill_choice.trim();
-    if SKILLS.contains(&skill_choice) {
+    let skill_choice = skill_choice.trim().parse::<usize>();
+    if let Ok(index) = skill_choice {
         active_methods.push(Method {
-            name: String::from(skill_choice),
+            name: SKILLS[index - 1].to_string(),
             ..Default::default()
         });
     }
