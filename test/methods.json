@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Rock Crabs",
+        "skill": "Attack",
+        "actions_left": 100,
+        "actions_done": 1,
+        "total_actions": 101
+    },
+    {
+      "name": "Stabbing",
+      "skill": "Attack",
+      "actions_left": 0,
+      "actions_done": 0,
+      "total_actions": 0
+    }
+]
